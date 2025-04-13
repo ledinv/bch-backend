@@ -28,3 +28,8 @@ def tipo_cambio_bch():
 @app.route('/ping')
 def ping():
     return jsonify({"status": "ok"})
+
+if __name__ == '__main__':
+    # Usa el puerto asignado por Render o el 10000 por defecto
+    port = int(os.environ.get("PORT", 10000))
+    app.run(host="0.0.0.0", port=port)
