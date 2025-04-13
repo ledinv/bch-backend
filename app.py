@@ -4,8 +4,8 @@ import os
 from flask_cors import CORS  # <-- Importa Flask-CORS
 
 app = Flask(__name__)
-# Habilita CORS para todas las rutas, restringiendo a tu dominio (opcional)
-CORS(app, resources={r"/*": {"origins": "https://ledinv.github.io"}})
+# Actualiza CORS para permitir solicitudes desde tu dominio nuevo
+CORS(app, resources={r"/*": {"origins": "https://comocomprarcarros.com"}})
 
 API_KEY = os.environ.get("BCH_API_KEY", "72f7ce1eed9746b3af662b7104fc0432")
 
